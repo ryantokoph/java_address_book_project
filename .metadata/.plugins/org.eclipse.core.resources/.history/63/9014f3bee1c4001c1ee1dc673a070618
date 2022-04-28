@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class TicTacToe {
+
+	public static void main(String[] args) {
+		char[][] gameBoard = {{' ', '|', ' ', '|', ' '},
+				{'-', '+', '-', '+', '-'},
+				{' ', '|', ' ', '|', ' '},
+				{'-', '+', '-', '+', '-'},
+				{' ', '|', ' ', '|', ' '}};
+	
+		printGameBoard(gameBoard);
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter you placement (1-9): ");
+		int placement = input.nextInt();
+		
+		System.out.println(placement);
+		
+		switch(placement) {
+			case 1:
+				gameBoard[0][0] = 'X';
+				break;
+		}
+		
+	}
+	
+	private static void Switch(int placement) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void printGameBoard(char[][] gameBoard) {
+		for(char[] row : gameBoard) {
+			for(char c : row) {
+				System.out.print(c);
+			}
+			System.out.println();
+		}
+	}
+
+}
